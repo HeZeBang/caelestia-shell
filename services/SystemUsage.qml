@@ -133,9 +133,6 @@ Singleton {
             const data = text();
             root.memTotal = parseInt(data.match(/MemTotal: *(\d+)/)[1], 10) || 1;
             root.memUsed = (root.memTotal - parseInt(data.match(/MemAvailable: *(\d+)/)[1], 10)) || 0;
-
-            root.swapTotal = parseInt(data.match(/SwapTotal: *(\d+)/)[1], 10) || 0;
-            root.swapUsed = (root.swapTotal - parseInt(data.match(/SwapFree: *(\d+)/)[1], 10)) || 0;
         }
     }
 
