@@ -127,7 +127,6 @@ StackView {
                             anchors.left: parent.left
 
                             active: item.modelData.buttonType !== 0 || item.modelData.icon !== ""
-                            asynchronous: true
 
                             sourceComponent: {
                                 if (item.modelData.buttonType === 1) return checkBoxComp;
